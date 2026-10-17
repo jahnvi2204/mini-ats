@@ -29,3 +29,13 @@ The sample desk is loaded the first time you open Harbor in a browser. Edits sta
 ## Stack
 
 Next.js, React, TypeScript, and Tailwind CSS. There is no server database: the desk is stored in `localStorage`, so the deployed site works without extra services.
+
+## Publishing
+
+The live site is a static export on the `gh-pages` branch. To publish a new version:
+
+```bash
+GITHUB_PAGES=true npm run build
+```
+
+Copy the `out/` folder to `gh-pages` and keep a `.nojekyll` file in that branch so GitHub Pages serves the `_next` assets.
