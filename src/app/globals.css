@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f3efe6;
+  --paper-raised: #faf8f3;
+  --ink: #1c1915;
+  --muted: #6f675e;
+  --faint: #8d857b;
+  --line: #e4dccf;
+  --line-strong: #d3c9b8;
+  --rail: #171512;
+  --rail-2: #2a241e;
+  --rail-text: #f6f1e8;
+  --rail-muted: #b7aea0;
+  --brass: #b9833a;
+  --brass-soft: #f6ead4;
+  --forest: #1b6b45;
+  --forest-soft: #e5f2ea;
+  --sea: #245b78;
+  --sea-soft: #e6f0f5;
+  --clay: #8d3d36;
+  --clay-soft: #f8e8e5;
+  --amber: #8a5a18;
+  --amber-soft: #f8efdc;
+}
+
+@theme inline {
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --color-paper: var(--paper);
+  --color-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-rail: var(--rail);
+  --color-rail-2: var(--rail-2);
+  --color-rail-text: var(--rail-text);
+  --color-rail-muted: var(--rail-muted);
+  --color-brass: var(--brass);
+  --color-brass-soft: var(--brass-soft);
+  --color-forest: var(--forest);
+  --color-forest-soft: var(--forest-soft);
+  --color-sea: var(--sea);
+  --color-sea-soft: var(--sea-soft);
+  --color-clay: var(--clay);
+  --color-clay-soft: var(--clay-soft);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+}
+
+body {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(ellipse at top left, rgba(185, 131, 58, 0.09), transparent 46%),
+    linear-gradient(180deg, rgba(255, 252, 246, 0.7), transparent 280px);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: #ead9b8;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  font: inherit;
+}
