@@ -52,8 +52,8 @@ function NavLinks({ tone }: { tone: "rail" | "paper" }) {
         const className =
           tone === "rail"
             ? active
-              ? "bg-rail-2 text-rail-text"
-              : "text-rail-muted hover:bg-white/5 hover:text-rail-text"
+              ? "bg-white/15 text-white shadow-sm"
+              : "text-rail-muted hover:bg-white/10 hover:text-rail-text"
             : active
               ? "bg-ink text-paper"
               : "text-muted hover:bg-white";
@@ -93,7 +93,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen bg-paper text-ink">
-      <aside className="fixed inset-y-0 left-0 z-20 hidden w-60 flex-col border-r border-black/40 bg-rail text-rail-text md:flex">
+      <aside className="fixed inset-y-0 left-0 z-20 hidden w-60 flex-col border-r border-white/10 bg-rail text-rail-text md:flex">
         <div className="px-3 pt-7">
           <Wordmark />
           <p className="mt-5 px-3 text-sm leading-5 text-rail-muted">
@@ -108,7 +108,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             type="button"
             data-testid="add-candidate"
             onClick={openCreate}
-            className="w-full rounded-full bg-brass px-4 py-2.5 text-sm font-semibold text-[#1c1408] hover:bg-[#d7a45a]"
+            className="w-full rounded-full bg-brass px-4 py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(31,111,235,0.28)] hover:bg-[#1859c4]"
           >
             Add candidate
           </button>
@@ -143,7 +143,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             <button
               type="button"
               onClick={openCreate}
-              className="rounded-full bg-ink px-3 py-1.5 text-sm text-paper"
+              className="rounded-full bg-brass px-3 py-1.5 text-sm text-white"
             >
               Add candidate
             </button>
@@ -162,7 +162,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <div
           role="status"
           data-testid="toast"
-          className="fixed bottom-4 left-1/2 z-50 -translate-x-1/2 rounded-full border border-line bg-ink px-4 py-2 text-sm text-rail-text shadow-lg"
+          className="fixed bottom-4 left-1/2 z-50 -translate-x-1/2 rounded-full bg-ink px-4 py-2 text-sm text-white shadow-lg"
         >
           {toast}
         </div>

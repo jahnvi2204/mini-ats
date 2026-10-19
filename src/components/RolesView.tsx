@@ -32,7 +32,7 @@ export function RolesView() {
                 <div className="flex items-center gap-2 text-sm">
                   <span
                     className={`rounded-full px-2.5 py-1 ${
-                      job.status === "open" ? "bg-forest-soft text-forest" : "bg-[#efeae1] text-muted"
+                      job.status === "open" ? "bg-forest-soft text-forest" : "bg-wash text-muted"
                     }`}
                   >
                     {job.status === "open" ? "Open" : "Closed"}
@@ -44,7 +44,7 @@ export function RolesView() {
                 </div>
               </div>
 
-              <div className="mt-4 flex h-2 overflow-hidden rounded-full bg-[#efe8db]">
+              <div className="mt-4 flex h-2 overflow-hidden rounded-full bg-wash">
                 {STAGES.map((stage) => {
                   const count = people.filter((candidate) => candidate.stage === stage).length;
                   if (count === 0 || people.length === 0) return null;

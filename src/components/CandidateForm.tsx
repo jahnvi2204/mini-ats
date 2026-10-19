@@ -94,7 +94,7 @@ function CandidateFormDialog() {
       <button
         type="button"
         aria-label="Close form"
-        className="absolute inset-0 bg-[#1c1915]/45"
+        className="absolute inset-0 bg-[#10283d]/45"
         onClick={closeForm}
       />
       <form
@@ -226,7 +226,7 @@ function CandidateFormDialog() {
           <button
             type="submit"
             data-testid="save-candidate"
-            className="rounded-full bg-ink px-4 py-2 text-sm text-paper"
+            className="rounded-full bg-brass px-4 py-2 text-sm text-white"
           >
             {form.mode === "edit" ? "Save changes" : "Add to desk"}
           </button>

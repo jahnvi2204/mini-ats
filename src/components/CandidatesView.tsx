@@ -66,7 +66,7 @@ export function CandidatesView() {
             <button
               type="button"
               onClick={openCreate}
-              className="rounded-full bg-ink px-4 py-2 text-sm text-paper"
+              className="rounded-full bg-brass px-4 py-2 text-sm text-white"
             >
               Add candidate
             </button>
@@ -180,7 +180,7 @@ export function CandidatesView() {
 
           <div className="mt-4 hidden overflow-hidden rounded-2xl border border-line bg-raised md:block">
             <table className="w-full text-left text-sm">
-              <thead className="bg-[#f6f1e8] text-xs uppercase tracking-[0.14em] text-faint">
+              <thead className="bg-wash text-xs uppercase tracking-[0.14em] text-faint">
                 <tr>
                   <th className="px-4 py-3 font-medium">Candidate</th>
                   <th className="px-4 py-3 font-medium">Role</th>
@@ -193,7 +193,7 @@ export function CandidatesView() {
               </thead>
               <tbody>
                 {filtered.map((candidate) => (
-                  <tr key={candidate.id} className="border-t border-line hover:bg-[#fbf8f2]">
+                  <tr key={candidate.id} className="border-t border-line hover:bg-paper">
                     <td className="px-4 py-3">
                       <button
                         type="button"

@@ -44,8 +44,8 @@ export function PipelineView() {
                 setOver(null);
                 if (id) moveStage(id, stage);
               }}
-              className={`flex w-72 shrink-0 flex-col rounded-2xl border bg-[#f7f3eb] p-3 ${
-                activeDrop ? "border-brass bg-brass-soft" : "border-line"
+              className={`flex w-72 shrink-0 flex-col rounded-2xl border p-3 ${
+                activeDrop ? "border-brass bg-brass-soft" : "border-line bg-wash"
               }`}
             >
               <header className="mb-3 flex items-start justify-between gap-2 px-1">
@@ -75,7 +75,7 @@ export function PipelineView() {
                         event.dataTransfer.setData("text/plain", candidate.id);
                         event.dataTransfer.effectAllowed = "move";
                       }}
-                      className="cursor-grab rounded-xl border border-line bg-raised p-3 shadow-[0_1px_0_rgba(28,25,21,0.03)] active:cursor-grabbing"
+                      className="cursor-grab rounded-xl border border-line bg-raised p-3 shadow-[0_8px_20px_rgba(18,51,82,0.05)] active:cursor-grabbing"
                     >
                       <button
                         type="button"

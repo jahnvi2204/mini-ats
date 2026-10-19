@@ -1,27 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f3efe6;
-  --paper-raised: #faf8f3;
-  --ink: #1c1915;
-  --muted: #6f675e;
-  --faint: #8d857b;
-  --line: #e4dccf;
-  --line-strong: #d3c9b8;
-  --rail: #171512;
-  --rail-2: #2a241e;
-  --rail-text: #f6f1e8;
-  --rail-muted: #b7aea0;
-  --brass: #b9833a;
-  --brass-soft: #f6ead4;
-  --forest: #1b6b45;
-  --forest-soft: #e5f2ea;
-  --sea: #245b78;
-  --sea-soft: #e6f0f5;
-  --clay: #8d3d36;
-  --clay-soft: #f8e8e5;
-  --amber: #8a5a18;
-  --amber-soft: #f8efdc;
+  --paper: #f4f8fc;
+  --paper-raised: #ffffff;
+  --ink: #14324c;
+  --muted: #5c7084;
+  --faint: #7d90a3;
+  --line: #d5e4f0;
+  --line-strong: #c1d4e6;
+  --rail: #123352;
+  --rail-2: #1c4a73;
+  --rail-text: #f4f8fb;
+  --rail-muted: #b7c9d9;
+  --brass: #1f6feb;
+  --brass-soft: #e7f1fc;
+  --forest: #0f7a56;
+  --forest-soft: #e5f6ef;
+  --sea: #1a6a9a;
+  --sea-soft: #e6f3fb;
+  --clay: #b4233a;
+  --clay-soft: #fdecee;
+  --amber: #9a6700;
+  --amber-soft: #fff6e0;
+  --wash: #e7f1fa;
 }
 
 @theme inline {
@@ -48,19 +49,21 @@
   --color-clay-soft: var(--clay-soft);
   --color-amber: var(--amber);
   --color-amber-soft: var(--amber-soft);
+  --color-wash: var(--wash);
 }
 
 body {
   background-color: var(--paper);
   background-image:
-    radial-gradient(ellipse at top left, rgba(185, 131, 58, 0.09), transparent 46%),
-    linear-gradient(180deg, rgba(255, 252, 246, 0.7), transparent 280px);
+    radial-gradient(ellipse 70% 45% at 0% -10%, rgba(31, 111, 235, 0.14), transparent 55%),
+    radial-gradient(ellipse 50% 35% at 100% 0%, rgba(125, 184, 232, 0.2), transparent 48%),
+    linear-gradient(180deg, #ffffff 0%, transparent 420px);
   color: var(--ink);
   font-family: var(--font-sans);
 }
 
 ::selection {
-  background: #ead9b8;
+  background: #d3e6f8;
 }
 
 :focus-visible {

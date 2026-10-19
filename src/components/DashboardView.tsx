@@ -78,7 +78,7 @@ export function DashboardView() {
                       {` · ${step.current} here now`}
                     </span>
                   </div>
-                  <div className="h-2.5 overflow-hidden rounded-full bg-[#efe8db]">
+                  <div className="h-2.5 overflow-hidden rounded-full bg-wash">
                     <div
                       className={`h-full rounded-full ${stageBarClass(step.stage)}`}
                       style={{ width: `${Math.max(6, (step.reached / widest) * 100)}%` }}
@@ -169,7 +169,7 @@ export function DashboardView() {
                     )}
                   </span>
                 </div>
-                <div className="h-2 overflow-hidden rounded-full bg-[#efe8db]">
+                <div className="h-2 overflow-hidden rounded-full bg-wash">
                   <div
                     className="h-full rounded-full bg-brass"
                     style={{
@@ -229,7 +229,7 @@ function Metric({
   href?: string;
 }) {
   const className =
-    "block rounded-2xl border border-line bg-raised px-4 py-4 shadow-[0_1px_0_rgba(28,25,21,0.03)]";
+    "block rounded-2xl border border-line bg-raised px-4 py-4 shadow-[0_10px_30px_rgba(18,51,82,0.05)]";
   const body = (
     <>
       <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-faint">{label}</p>

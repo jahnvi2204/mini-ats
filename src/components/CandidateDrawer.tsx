@@ -55,7 +55,7 @@ export function CandidateDrawer() {
       <button
         type="button"
         aria-label="Close candidate"
-        className="absolute inset-0 bg-[#1c1915]/40"
+        className="absolute inset-0 bg-[#10283d]/40"
         onClick={closeCandidate}
       />
       <aside
