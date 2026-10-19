@@ -16,6 +16,12 @@ async function pause(ms) {
   await page.waitForTimeout(ms);
 }
 
+async function hideDevTools() {
+  await page.addStyleTag({
+    content: "nextjs-portal{display:none!important}",
+  });
+}
+
 async function caption(text) {
   await page.evaluate((message) => {
     let bar = document.getElementById("demo-caption");
@@ -24,16 +30,18 @@ async function caption(text) {
       bar.id = "demo-caption";
       bar.style.cssText = [
         "position:fixed",
-        "left:24px",
-        "bottom:24px",
+        "left:276px",
+        "bottom:28px",
         "z-index:80",
         "max-width:720px",
-        "background:#171512",
-        "color:#f6f1e8",
+        "background:#ffffff",
+        "color:#14324c",
         "padding:14px 18px",
-        "border-radius:14px",
-        "font:600 20px/1.35 Figtree, sans-serif",
-        "box-shadow:0 12px 40px rgba(0,0,0,0.25)",
+        "border-radius:16px",
+        "border:1px solid #d5e4f0",
+        "border-left:4px solid #1f6feb",
+        "font:600 20px/1.35 Figtree, ui-sans-serif, sans-serif",
+        "box-shadow:0 16px 40px rgba(18,51,82,0.16)",
       ].join(";");
       document.body.appendChild(bar);
     }
@@ -44,6 +52,7 @@ async function caption(text) {
 await page.goto(baseUrl);
 await page.evaluate(() => window.localStorage.removeItem("harbor-ats-v1"));
 await page.reload();
+await hideDevTools();
 await page.getByTestId("metrics").waitFor();
 
 await caption("Harbor keeps candidates, stages, and hiring metrics on one desk.");
